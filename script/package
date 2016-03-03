@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+lein uberjar && \
+    docker build -t joeygibson/cassandrarest .
+
