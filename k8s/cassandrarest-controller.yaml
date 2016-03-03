@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: cassandrarest
+  name: cassandrarest-controller
+spec:
+  replicas: 3
+  selector:
+    component: cassandrarest
+  template:
+    metadata:
+      labels:
+        app: cassandrarestapp
+        component: cassandrarest
+    spec:
+      containers:
+      - image: joeygibson/cassandrarest
+        name: cassandrarest
+        ports:
+        - containerPort: 8080
+          hostPort: 8800
+        resources:
+          limits:
+            cpu: 100m

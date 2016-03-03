@@ -3,12 +3,14 @@
             [ring.middleware.params :refer [wrap-params]]
             [compojure.core :refer [defroutes ANY]]
             [clojure.data.json :as json])
+  (:use [ring.server.standalone])
   (:gen-class))
 
-(def yapper (cassandrarest.CassandraYapper. "104.197.18.138"))
+(defn get-yapper []
+  (cassandrarest.CassandraYapper. "104.197.18.138"))
 
 (defn get-data []
-  (.getData yapper))
+  (.getData (get-yapper)))
 
 (defresource get-data-resource
              :allowed-methods [:get]
@@ -33,4 +35,7 @@
 (def handler
   (-> app
       wrap-params))
+
+(defn -main []
+  (serve cassandrarest.core/handler))
 

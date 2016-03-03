@@ -10,7 +10,8 @@
                  [ring/ring-core "1.2.1"]
                  [liberator "0.14.0"]
                  [org.clojure/data.json "0.2.6"]
-                 [com.datastax.cassandra/cassandra-driver-core "2.0.2"]]
+                 [com.datastax.cassandra/cassandra-driver-core "2.0.2"]
+                 [ring-server "0.4.0"]]
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :main ^:skip-aot cassandrarest.core
