@@ -13,6 +13,11 @@ Simple REST controller for accessing our Cassandra database.
 * Run `./script/run` to run the container and stay connected to the log
 * Run `./script/start` to run the container in the background
 
+## Kubernetes
+
+1. Run `./script/k8s-create` to load the container into your Kubernetes cluster.
+2. Run `./script/k8s-expose` to create a load balancer service to expose it to the world
+
 ## License
 
 Copyright © 2016 joey@joeygibson.com
