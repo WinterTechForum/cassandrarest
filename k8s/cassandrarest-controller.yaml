@@ -5,7 +5,7 @@ metadata:
     name: cassandrarest
   name: cassandrarest-controller
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     component: cassandrarest
   template:
@@ -18,8 +18,8 @@ spec:
       - image: joeygibson/cassandrarest
         name: cassandrarest
         ports:
-        - containerPort: 8080
-          hostPort: 8800
+        - containerPort: 3000
+          hostPort: 3000
         resources:
           limits:
             cpu: 100m
