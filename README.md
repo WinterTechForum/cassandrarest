@@ -1,6 +1,6 @@
 # cassandrarest
 
-FIXME: description
+Simple REST controller for accessing our Cassandra database.
 
 ## Installation
 
