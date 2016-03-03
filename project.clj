@@ -8,7 +8,8 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.3.4"]
                  [ring/ring-core "1.2.1"]
-                 [liberator "0.14.0"]]
+                 [liberator "0.14.0"]
+                 [org.clojure/data.json "0.2.6"]]
   :main ^:skip-aot cassandrarest.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
