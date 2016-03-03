@@ -5,8 +5,10 @@
             [clojure.data.json :as json])
   (:gen-class))
 
+(def yapper (cassandrarest.CassandraYapper. "104.197.18.138"))
+
 (defn get-data []
-  {:a 1 :b 2 :c 3 :d 4})
+  (.getData yapper))
 
 (defresource get-data-resource
              :allowed-methods [:get]

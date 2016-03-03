@@ -9,7 +9,10 @@
                  [compojure "1.3.4"]
                  [ring/ring-core "1.2.1"]
                  [liberator "0.14.0"]
-                 [org.clojure/data.json "0.2.6"]]
+                 [org.clojure/data.json "0.2.6"]
+                 [com.datastax.cassandra/cassandra-driver-core "2.0.2"]]
+  :source-paths ["src/clojure"]
+  :java-source-paths ["src/java"]
   :main ^:skip-aot cassandrarest.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
